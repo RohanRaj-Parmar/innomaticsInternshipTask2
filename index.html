@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="landing-page">
+        <h1>Memory Match Game</h1>
+        <div class="category-buttons">
+            <button onclick="startGame('fruits')">Fruits</button>
+            <button onclick="startGame('emojis')">Emojis</button>
+            <button onclick="startGame('animals')">Animals</button>
+            <button onclick="startGame('planets')">Planets</button>
+            <button onclick="startGame('flags')">Flags</button>
+        </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <div id="game-header">
+            <div>Score: <span id="score">0</span></div>
+            <div>Time: <span id="timer">30</span>s</div>
+        </div>
+        <div id="card-grid"></div>
+        <button id="restart-btn" onclick="restartGame()">Restart</button>
+    </div>
+
+    <div id="game-over" class="hidden">
+        <h2 id="game-result"></h2>
+        <p>Final Score: <span id="final-score"></span></p>
+        <button onclick="showLandingPage()">Back to Menu</button>
+    </div>
+
+    <audio id="flip-sound" src="https://www.soundjay.com/buttons/beep-01a.mp3"></audio>
+    <audio id="match-sound" src="https://www.soundjay.com/buttons/beep-07.mp3"></audio>
+    <audio id="game-over-sound" src="https://www.soundjay.com/buttons/beep-02.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
